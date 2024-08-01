@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/main/resources/Features",
-        glue = {"StepDefinitions"},
+        glue = {"CucumberJava"},
         monochrome = true,
         plugin = {"pretty", "html:target/reports/Reports.html"},
         tags = "@SmokeTest")

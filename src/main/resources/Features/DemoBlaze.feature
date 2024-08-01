@@ -1,11 +1,12 @@
 Feature: Login demoblaze page
 
+  @SmokeTest
   Scenario Outline: Login success demo blaze page
-    Given open browser
-    And open demo blaze page
-    When enter <username> and <password>
-    And click login button
+    Given open demo blaze page url "<url>"
+    And click button login
+    When input username "<username>" and password "<password>"
+    And click button submit login
     Then verify login
     Examples:
-      | username | password |
-      | hoan     | 123456   |
+      | url                                  | username | password |
+      | https://www.demoblaze.com/index.html | hoan     | 123456   |
